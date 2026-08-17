@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hawyia | Bespoke Chairs Collection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0b0b0b; --card-bg: #141414; --gold: #d4af37; --gold-light: #f3e5ab;
+            --text-main: #f5f5f5; --text-muted: #aaaaaa; --transition: all 0.5s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Montserrat', sans-serif; }
+        a { text-decoration: none; color: inherit; }
+
+        header {
+            position: fixed; top: 0; left: 0; width: 100%;
+            background: rgba(11, 11, 11, 0.9); backdrop-filter: blur(10px);
+            z-index: 1000; display: flex; justify-content: space-between;
+            align-items: center; padding: 20px 5%; border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .logo-image { height: 45px; width: auto; object-fit: contain; }
+        .back-link { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); transition: var(--transition); }
+        .back-link:hover { color: var(--text-main); }
+
+        .catalog-header { padding: 150px 8% 40px; text-align: center; }
+        .catalog-header h1 { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--gold); margin-bottom: 15px; letter-spacing: 2px; }
+        .catalog-header p { color: var(--text-muted); font-size: 1rem; max-width: 600px; margin: 0 auto; line-height: 1.8; }
+
+        .product-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px; padding: 40px 8% 100px;
+        }
+
+        .product-card {
+            background: var(--card-bg); border: 1px solid rgba(212, 175, 55, 0.15);
+            display: flex; flex-direction: column; transition: var(--transition); overflow: hidden;
+        }
+        .product-card:hover { border-color: var(--gold); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
+
+        .product-img-wrapper { position: relative; height: 350px; overflow: hidden; }
+        .product-img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+        .product-card:hover .product-img-wrapper img { transform: scale(1.05); }
+
+        .product-badge {
+            position: absolute; top: 15px; left: 15px; background: var(--gold); color: var(--bg-color);
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; padding: 5px 12px; font-weight: 600;
+        }
+
+        .product-details { padding: 25px; display: flex; flex-direction: column; flex-grow: 1; }
+        .product-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 10px; letter-spacing: 1px; }
+        
+        .product-specs { list-style: none; margin-bottom: 20px; font-size: 0.85rem; color: var(--text-muted); }
+        .product-specs li { margin-bottom: 6px; display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 4px; }
+        .product-specs li span:last-child { color: var(--text-main); font-weight: 500; }
+
+        .product-footer { display: flex; justify-content: flex-end; align-items: center; margin-top: auto; border-top: 1px solid rgba(212, 175, 55, 0.1); padding-top: 20px; }
+        
+        .btn-inquire {
+            background: transparent; border: 1px solid var(--gold); color: var(--gold);
+            padding: 10px 22px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;
+            cursor: pointer; transition: var(--transition); font-weight: 600; width: 100%; text-align: center;
+        }
+        .btn-inquire:hover { background: var(--gold); color: var(--bg-color); }
+
+        footer { background: #050505; padding: 40px 8%; text-align: center; border-top: 1px solid rgba(212, 175, 55, 0.1); }
+        footer p { color: var(--text-muted); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="image_4d15c7.jpeg" alt="Hawyia Logo" class="logo-image">
+        </a>
+        <a href="index.html#portfolio" class="back-link">&larr; Back to Portfolio</a>
+    </header>
+
+    <div class="catalog-header">
+        <h1>Chairs & Recliners Collection</h1>
+        <p>Ergonomically shaped statement armchairs and luxury dining chairs handcrafted with solid woods and tactile fabrics.</p>
+    </div>
+
+    <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="product-img-wrapper">
+                <span class="product-badge">New Arrival</span>
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=80" alt="Hawthorne Armchair">
+            </div>
+            <div class="product-details">
+                <h3 class="product-title">The Hawthorne Armchair</h3>
+                <ul class="product-specs">
+                    <li><span>Material:</span><span>Bouclé Fabric & Brass</span></li>
+                    <li><span>Dimensions:</span><span>85cm x 90cm x 88cm</span></li>
+                    <li><span>Frame:</span><span>Walnut Timber</span></li>
+                </ul>
+                <div class="product-footer">
+                    <button class="btn-inquire" onclick="alert('Inquiry sent for Hawthorne Armchair.')">Request Custom Quote</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="product-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?auto=format&fit=crop&w=1000&q=80" alt="Executive Dining Chair">
+            </div>
+            <div class="product-details">
+                <h3 class="product-title">Executive Dining Chair</h3>
+                <ul class="product-specs">
+                    <li><span>Material:</span><span>Matte Black Velvet</span></li>
+                    <li><span>Dimensions:</span><span>55cm x 58cm x 92cm</span></li>
+                    <li><span>Frame:</span><span>Solid Oak</span></li>
+                </ul>
+                <div class="product-footer">
+                    <button class="btn-inquire" onclick="alert('Inquiry sent for Dining Chair.')">Request Custom Quote</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="product-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1580480055273-228ff5388ef8?q=80&w=687&auto=format&fit=crop" alt="Accent Chair">
+            </div>
+            <div class="product-details">
+                <h3 class="product-title">Geometric Accent Chair</h3>
+                <ul class="product-specs">
+                    <li><span>Material:</span><span>Structured Wool Blend</span></li>
+                    <li><span>Dimensions:</span><span>75cm x 78cm x 82cm</span></li>
+                    <li><span>Frame:</span><span>Brushed Gold Steel</span></li>
+                </ul>
+                <div class="product-footer">
+                    <button class="btn-inquire" onclick="alert('Inquiry sent for Accent Chair.')">Request Custom Quote</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <div class="product-img-wrapper">
+                <span class="product-badge">Ergonomic</span>
+                <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=1000&q=80" alt="Signature Lounge Recliner">
+            </div>
+            <div class="product-details">
+                <h3 class="product-title">Signature Lounge Recliner</h3>
+                <ul class="product-specs">
+                    <li><span>Material:</span><span>Full-Grain Saddle Leather</span></li>
+                    <li><span>Dimensions:</span><span>90cm x 95cm x 105cm</span></li>
+                    <li><span>Frame:</span><span>Molded Plywood & Iron</span></li>
+                </ul>
+                <div class="product-footer">
+                    <button class="btn-inquire" onclick="alert('Inquiry sent for Recliner.')">Request Custom Quote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Hawyia Interior Design & Joinery. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
